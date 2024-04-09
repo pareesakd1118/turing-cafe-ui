@@ -16,10 +16,6 @@ function App() {
         getReservations()
     }, [])
 
-    function addReservation(newReservation) {
-      setReservations([...reservations, newReservation])
-    }
-
     function postReservation(newReservation) {
       return fetch("http://localhost:3001/api/v1/reservations", {
         method: 'POST',
