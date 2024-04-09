@@ -20,6 +20,12 @@ function App() {
       setReservations([...reservations, newReservation])
     }
 
+    function postReservation(newReservation) {
+      return fetch("http://localhost:3001/api/v1/reservations", {
+        
+      })
+    }
+
   return (
     <div className="App">
       <h1 className='app-title'>Turing Cafe Reservations</h1>
