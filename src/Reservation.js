@@ -4,7 +4,7 @@ import "./Reservation.css"
 function Reservation({id, name, date, number, time}) {
 
     return (
-        <div className="reservation" id={id}>
+        <div key={id} className="reservation" id={id}>
             <h3>{name}</h3>
             <p>{date}</p>
             <p>{time}pm</p>

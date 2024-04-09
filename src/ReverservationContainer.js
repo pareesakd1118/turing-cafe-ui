@@ -17,6 +17,7 @@ function ReservationContainer({reservations}) {
 
     const reservationList = reservations.map(reservation => {
         return <Reservation
+                    key={reservation.id}
                     id={reservation.id}
                     name={reservation.name}
                     time={reservation.time}
