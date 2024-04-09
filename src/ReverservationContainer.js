@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react"
+import React from "react"
 import Reservation from "./Reservation"
 import "./ReservationContainer.css"
 
-function ReservationContainer({reservations}) {
+function ReservationContainer({reservations, cancelReservation}) {
 
 
     const reservationList = reservations.map(reservation => {
@@ -13,6 +13,7 @@ function ReservationContainer({reservations}) {
                     time={reservation.time}
                     number={reservation.number}
                     date={reservation.date}
+                    cancelReservation={cancelReservation}
                 />
     })
 

@@ -1,7 +1,7 @@
 import React from "react"
 import "./Reservation.css"
 
-function Reservation({id, name, date, number, time}) {
+function Reservation({id, name, date, number, time, cancelReservation}) {
 
     return (
         <div key={id} className="reservation" id={id}>
@@ -9,7 +9,7 @@ function Reservation({id, name, date, number, time}) {
             <p>{date}</p>
             <p>{time}pm</p>
             <p>Number of Guests: {number}</p>
-            <button>cancel</button>
+            <button onClick={() => cancelReservation(id)}>cancel</button>
         </div>
     )
 }

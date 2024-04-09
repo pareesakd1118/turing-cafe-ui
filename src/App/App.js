@@ -28,6 +28,14 @@ function App() {
       .then(data => setReservations([...reservations, data]))
     }
 
+    function cancelReservation(id) {
+      const filteredArray = reservations.filter(res => {
+        return res.id !== id
+      })
+
+      setReservations(filteredArray)
+    }
+
   return (
     <div className="App">
       <h1 className='app-title'>Turing Cafe Reservations</h1>
@@ -35,7 +43,7 @@ function App() {
         <Form postReservation={postReservation}/>
       </div>
       <div className='resy-container'>
-        <ReservationContainer reservations={reservations}/>
+        <ReservationContainer cancelReservation={cancelReservation} reservations={reservations}/>
       </div>
     </div>
   );
